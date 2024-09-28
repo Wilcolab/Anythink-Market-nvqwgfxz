@@ -11,7 +11,7 @@ cat $FILE_NAME |
     while read l;do 
         first_name=$(echo "$l" | grep  "@amazon.com" | awk -F',' '{print $3 " " $2}' ); 
         if [[ $first_name ]]; then 
-            echo "$first_name" >> names.txt; 
+            echo "$first_name" >> output_names.txt; 
         fi; 
     done;
 
